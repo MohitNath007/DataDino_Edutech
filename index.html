@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>DataDino Edutech | Learn Data, Lead Tomorrow</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -11,162 +11,158 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-slate-50 via-white to-amber-50/30 text-slate-800 antialiased min-h-screen flex flex-col justify-between p-4 sm:p-6 md:p-8">
+<body class="bg-[#F8FAFC] text-slate-800 antialiased min-h-screen p-3 sm:p-5 flex flex-col justify-between">
 
-  <div class="max-w-xl mx-auto w-full space-y-4 sm:space-y-5">
+  <!-- Mobile Wrapper Constrained for all 360px-430px viewports -->
+  <main class="w-full max-w-[420px] mx-auto space-y-3">
     
-    <!-- HEADER: Logo + YouTube Tab -->
-    <header class="flex items-start justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm">
-      <!-- Logo Side -->
-      <div class="flex items-center gap-3">
-        <!-- Exact Logo File Integrated -->
+    <!-- HEADER -->
+    <header class="bg-white p-3 rounded-2xl border border-slate-200/80 shadow-xs flex items-center justify-between gap-2">
+      <!-- Left: Logo & Titles -->
+      <div class="flex items-center gap-2.5 min-w-0 flex-1">
         <img 
           src="Company Logo.png" 
           alt="DataDino Logo" 
-          class="w-12 h-12 rounded-xl object-contain shadow-sm border border-slate-100 flex-shrink-0"
+          class="w-10 h-10 rounded-xl object-contain border border-slate-100 flex-shrink-0"
         />
-        <div>
-          <h1 class="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 leading-tight">DataDino Edutech</h1>
-          <p class="text-[11px] text-amber-700 font-semibold tracking-wide">Learn Data, Lead Tomorrow</p>
+        <div class="min-w-0 flex-1">
+          <h1 class="text-[14px] font-extrabold text-slate-900 leading-tight truncate">DataDino Edutech</h1>
+          <p class="text-[10px] text-amber-700 font-bold tracking-tight truncate">Learn Data, Lead Tomorrow</p>
         </div>
       </div>
 
-      <!-- YouTube Button + Animated Indicator -->
-      <div class="flex flex-col items-end">
+      <!-- Right: YouTube Action -->
+      <div class="flex flex-col items-center flex-shrink-0">
         <a 
           href="https://openinyoutube.com/@Datadino_Edutech" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="flex items-center gap-2 bg-[#FF0000] hover:bg-red-600 active:scale-95 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-lg shadow-red-500/25 transition-all duration-200"
+          class="flex items-center gap-1.5 bg-[#FF0000] hover:bg-red-600 active:scale-95 text-white font-bold text-[11px] px-3 py-1.5 rounded-lg shadow-sm shadow-red-500/20 transition"
         >
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <svg class="w-3.5 h-3.5 fill-current flex-shrink-0" viewBox="0 0 24 24">
             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
           <span>Subscribe</span>
         </a>
-
-        <!-- Animated Arrow & Indicator Below Subscribe Button -->
-        <div class="flex items-center gap-1 mt-1.5 text-[11px] font-bold text-red-600 animate-bounce">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-          </svg>
-          <span>Free YouTube Tutorials</span>
-        </div>
+        <span class="text-[9px] font-bold text-red-600 animate-bounce mt-1 tracking-tight whitespace-nowrap">
+          ↑ Free Tutorials
+        </span>
       </div>
     </header>
 
     <!-- TOOLS BADGE ROW -->
-    <div class="text-center bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-xl py-2.5 px-3 shadow-xs">
-      <p class="text-[11px] uppercase tracking-wider text-slate-500 font-bold mb-2">You Will Get Videos On All Data Tools</p>
-      <div class="flex flex-wrap justify-center gap-1.5 text-xs font-semibold">
-        <span class="bg-blue-50 text-blue-700 border border-blue-200/80 px-2.5 py-1 rounded-lg">Python</span>
-        <span class="bg-amber-50 text-amber-700 border border-amber-200/80 px-2.5 py-1 rounded-lg">Power BI</span>
-        <span class="bg-sky-50 text-sky-700 border border-sky-200/80 px-2.5 py-1 rounded-lg">SQL</span>
-        <span class="bg-emerald-50 text-emerald-700 border border-emerald-200/80 px-2.5 py-1 rounded-lg">Excel</span>
-        <span class="bg-purple-50 text-purple-700 border border-purple-200/80 px-2.5 py-1 rounded-lg">Big Data Analytics</span>
+    <section class="text-center bg-white border border-slate-200/80 rounded-xl py-2 px-2 shadow-xs">
+      <p class="text-[9px] uppercase tracking-wider text-slate-500 font-extrabold mb-1.5">Videos On All Core Data Tools</p>
+      <div class="flex flex-wrap justify-center gap-1.5 text-[11px] font-bold">
+        <span class="bg-blue-50 text-blue-700 border border-blue-200/70 px-2 py-0.5 rounded-md">Python</span>
+        <span class="bg-amber-50 text-amber-700 border border-amber-200/70 px-2 py-0.5 rounded-md">Power BI</span>
+        <span class="bg-sky-50 text-sky-700 border border-sky-200/70 px-2 py-0.5 rounded-md">SQL</span>
+        <span class="bg-emerald-50 text-emerald-700 border border-emerald-200/70 px-2 py-0.5 rounded-md">Excel</span>
+        <span class="bg-purple-50 text-purple-700 border border-purple-200/70 px-2 py-0.5 rounded-md">Big Data</span>
       </div>
-    </div>
+    </section>
 
-    <!-- MAIN HOOK / CORE IDEOLOGY CARD -->
-    <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-yellow-500/10 to-amber-500/5 border border-amber-300/60 shadow-xs text-center">
-      <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">
-        AI can give you code, <br class="sm:hidden" />
-        <span class="text-amber-800 underline decoration-amber-400 decoration-2 underline-offset-4">but deep line-by-line understanding</span> you will get here!
+    <!-- VALUE PROPOSITION HOOK -->
+    <section class="p-3 rounded-xl bg-amber-50/80 border border-amber-300/80 shadow-xs text-center">
+      <p class="text-[12px] sm:text-[13px] font-bold text-slate-900 leading-snug">
+        AI can give you code, <br />
+        <span class="text-amber-800 underline decoration-amber-400 decoration-2 underline-offset-2">but deep line-by-line understanding</span> you get here!
       </p>
-    </div>
+    </section>
 
     <!-- COURSE TEASER CARD -->
-    <div class="relative overflow-hidden rounded-2xl bg-white border-2 border-amber-400/40 p-5 shadow-md shadow-amber-500/5">
-      <div class="flex items-center justify-between mb-3">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-amber-100 text-amber-900 border border-amber-300">
-          <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
-          PYTHON COURSE IS LOADING!
+    <section class="rounded-2xl bg-white border border-amber-300 shadow-xs p-3.5 space-y-2.5">
+      <!-- Flex Header With Auto-Wrap Safety -->
+      <div class="flex flex-wrap items-center justify-between gap-1.5 pb-0.5">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-black bg-amber-100 text-amber-900 border border-amber-300 whitespace-nowrap">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-ping"></span>
+          PYTHON COURSE LOADING
         </span>
-        <span class="text-xs text-slate-500 font-semibold">Upcoming Cohort</span>
+        <span class="text-[10px] text-slate-500 font-bold whitespace-nowrap">Upcoming Cohort</span>
       </div>
 
-      <h2 class="text-base sm:text-lg font-black text-slate-900 mb-2 tracking-tight">
-        Why This Course?
-      </h2>
-      
-      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-        Here you will understand what the code does behind the screen. We bridge the gap between AI-generated scripts and deep technical fundamentals.
-      </p>
+      <div>
+        <h2 class="text-[14px] font-extrabold text-slate-900 tracking-tight leading-snug">
+          Why This Course?
+        </h2>
+        <p class="text-[11px] text-slate-600 leading-relaxed mt-0.5">
+          Master what code executes behind the screen. We bridge the gap between AI scripts and fundamental backend logic.
+        </p>
+      </div>
 
-      <!-- Key Value Points -->
-      <div class="space-y-2.5 bg-slate-50 rounded-xl p-3 border border-slate-200 mb-4 text-xs text-slate-700">
-        <div class="flex items-start gap-2">
-          <span class="text-emerald-600 font-black text-sm leading-none mt-0.5">✓</span>
-          <span><strong>Unshakeable Confidence:</strong> Gain the ability to tell anyone on their face that you know Python core concepts forever.</span>
+      <!-- Feature Bullets -->
+      <div class="space-y-1.5 bg-slate-50/90 rounded-lg p-2.5 border border-slate-200/80 text-[11px] text-slate-700">
+        <div class="flex items-start gap-1.5">
+          <span class="text-emerald-600 font-black leading-none mt-0.5">✓</span>
+          <span><strong>Unshakeable Confidence:</strong> Gain clarity to answer any Python core interview concept with zero hesitation.</span>
         </div>
-        <div class="flex items-start gap-2">
-          <span class="text-emerald-600 font-black text-sm leading-none mt-0.5">✓</span>
+        <div class="flex items-start gap-1.5">
+          <span class="text-emerald-600 font-black leading-none mt-0.5">✓</span>
           <span><strong>Official Credential:</strong> Certificate of completion automatically delivered to your email after 2 months.</span>
         </div>
       </div>
 
-      <!-- YouTube Watch CTA -->
+      <!-- CTA -->
       <a 
         href="https://openinyoutube.com/@Datadino_Edutech" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-bold text-xs sm:text-sm py-3 rounded-xl transition shadow-md shadow-red-600/20 active:scale-[0.99]"
+        class="w-full flex items-center justify-center gap-1.5 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 active:scale-[0.99] text-white font-bold text-xs py-2.5 rounded-xl transition shadow-xs"
       >
         <span>Watch Free Episodes on YouTube</span>
         <span>→</span>
       </a>
-    </div>
+    </section>
 
-    <!-- ABOUT ME & SOCIAL PROOF -->
-    <div class="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
-      <!-- Exact Profile Photo Integrated -->
+    <!-- ABOUT ME CARD -->
+    <section class="rounded-2xl bg-white border border-slate-200/80 p-3 shadow-xs flex items-center gap-3">
       <img 
         src="Mohit Image.jpeg" 
         alt="Mohit Nath" 
-        class="w-16 h-16 rounded-full object-cover ring-2 ring-amber-300 shadow-sm flex-shrink-0"
+        class="w-12 h-12 rounded-full object-cover ring-2 ring-amber-300 border border-white flex-shrink-0"
       />
-      <div class="flex-1">
-        <h3 class="text-sm font-bold text-slate-900 mb-0.5">About Me</h3>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          I am a certified Data Professional on a mission to provide quality teaching at an affordable price so anyone can learn and excel.
+      <div class="flex-1 min-w-0">
+        <h3 class="text-[12px] font-extrabold text-slate-900 leading-none">About Me</h3>
+        <p class="text-[10px] text-slate-600 leading-normal mt-1">
+          Certified Data Professional on a mission to teach real-world data skills at an affordable price so anyone can excel.
         </p>
         
-        <!-- Social Profiles -->
-        <div class="flex items-center justify-center sm:justify-start gap-2.5 mt-3">
-          <!-- PASTE YOUR LINKEDIN URL IN PLACE OF # BELOW -->
+        <div class="flex items-center gap-1.5 mt-2">
           <a 
-            href="https://www.linkedin.com/in/mohitnath-dataanalyst/?isSelfProfile=true" 
+            href="https://www.linkedin.com/in/mohit-nath-3444051a8" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="text-xs font-semibold text-slate-700 hover:text-blue-700 bg-slate-100 hover:bg-blue-50 border border-slate-200 px-3 py-1.5 rounded-lg transition"
+            class="text-[10px] font-bold text-slate-700 hover:text-blue-700 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-md transition"
           >
-            LinkedIn Profile
+            LinkedIn
           </a>
-
-          <!-- PASTE YOUR INSTAGRAM URL IN PLACE OF # BELOW -->
           <a 
-            href="https://www.instagram.com/datadino.edutech"
+            href="https://www.instagram.com/datadino.edutech" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="text-xs font-semibold text-slate-700 hover:text-pink-700 bg-slate-100 hover:bg-pink-50 border border-slate-200 px-3 py-1.5 rounded-lg transition"
+            class="text-[10px] font-bold text-slate-700 hover:text-pink-700 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-md transition"
           >
             Instagram
           </a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="text-center text-[11px] text-slate-400 py-2">
-      © DataDino Edutech • Learn Data, Lead Tomorrow
-    </footer>
+  </main>
 
-  </div>
+  <!-- FOOTER -->
+  <footer class="text-center text-[9px] text-slate-400 pt-3 pb-1">
+    © DataDino Edutech • Learn Data, Lead Tomorrow
+  </footer>
 
 </body>
 </html>
