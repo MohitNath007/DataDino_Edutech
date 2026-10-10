@@ -121,6 +121,111 @@
       </a>
     </div>
 
+    <!-- OPTION B: DEDICATED EARLY ACCESS WAITLIST CARD -->
+    <div class="rounded-2xl bg-white border border-slate-200/90 p-5 shadow-sm">
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <h3 class="text-sm sm:text-base font-extrabold text-slate-900 tracking-tight">
+          Join Python Waitlist
+        </h3>
+        <span class="text-[10px] sm:text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 px-2 py-0.5 rounded-full">
+          Get 10% Discount
+        </span>
+      </div>
+      <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+        Be the first to get access when the cohort launches and secure early-bird pricing.
+      </p>
+
+      <!-- Waitlist Form -->
+      <form id="waitlistForm" class="space-y-3">
+        <div>
+          <label for="name" class="block text-[11px] font-bold text-slate-700 uppercase tracking-wide mb-1">Full Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            required 
+            placeholder="Mohit Nath" 
+            class="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition bg-slate-50/50"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="block text-[11px] font-bold text-slate-700 uppercase tracking-wide mb-1">Email Address</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required 
+            placeholder="you@example.com" 
+            class="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition bg-slate-50/50"
+          />
+        </div>
+
+        <div>
+          <label for="background" class="block text-[11px] font-bold text-slate-700 uppercase tracking-wide mb-1">Current Background</label>
+          <select 
+            id="background" 
+            name="background" 
+            required 
+            class="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition bg-slate-50/50"
+          >
+            <option value="" disabled selected>Select your current status</option>
+            <option value="Student">Student (College / Final Year)</option>
+            <option value="Working Professional (IT)">Working Professional (IT)</option>
+            <option value="Working Professional (Non-IT)">Working Professional (Non-IT / Career Switcher)</option>
+            <option value="Job Seeker">Job Seeker</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <div>
+            <label for="city" class="block text-[11px] font-bold text-slate-700 uppercase tracking-wide mb-1">City</label>
+            <input 
+              type="text" 
+              id="city" 
+              name="city" 
+              required 
+              placeholder="Bengaluru" 
+              class="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition bg-slate-50/50"
+            />
+          </div>
+          <div>
+            <label for="state" class="block text-[11px] font-bold text-slate-700 uppercase tracking-wide mb-1">State</label>
+            <input 
+              type="text" 
+              id="state" 
+              name="state" 
+              required 
+              placeholder="Karnataka" 
+              class="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition bg-slate-50/50"
+            />
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          id="submitBtn"
+          class="w-full mt-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 active:scale-[0.99] text-white font-bold text-xs sm:text-sm py-2.5 rounded-xl shadow-md shadow-amber-500/20 transition flex items-center justify-center gap-1.5"
+        >
+          <span>Claim 10% Off & Reserve Seat</span>
+          <span>→</span>
+        </button>
+      </form>
+
+      <!-- Success Feedback (Hidden by default) -->
+      <div id="formSuccess" class="hidden mt-3 p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-center">
+        <p class="text-xs font-bold text-emerald-800">🎉 Seat Reserved Successfully!</p>
+        <p class="text-[11px] text-emerald-700 mt-0.5">We have logged your email. Your 10% early-bird coupon code will arrive when registration opens.</p>
+      </div>
+
+      <!-- Error Feedback (Hidden by default) -->
+      <div id="formError" class="hidden mt-3 p-3 bg-rose-50 border border-rose-200 rounded-xl text-center">
+        <p class="text-xs font-bold text-rose-800">Submission failed</p>
+        <p class="text-[11px] text-rose-700 mt-0.5">Please check your connection and try again.</p>
+      </div>
+    </div>
+
     <!-- ABOUT ME & SOCIAL PROOF -->
     <div class="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
       <img 
@@ -134,16 +239,22 @@
           I am a certified Data Professional on a mission to provide quality teaching at an affordable price so anyone can learn and excel.
         </p>
         
-        <!-- Social Profiles -->
+    <!-- Social Profiles -->
         <div class="flex items-center justify-center sm:justify-start gap-2.5 mt-3">
-          <a 
-            href="https://www.linkedin.com/in/mohit-nath-3444051a8" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="text-xs font-semibold text-slate-700 hover:text-blue-700 bg-slate-100 hover:bg-blue-50 border border-slate-200 px-3 py-1.5 rounded-lg transition"
-          >
-            LinkedIn Profile
-          </a>
+<a 
+  href="https://www.linkedin.com/in/mohitnath-dataanalyst/?isSelfProfile=true" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  onclick="
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.location.href = 'intent:www.linkedin.com/in/mohitnath-dataanalyst/?isSelfProfile=true#Intent;package=com.linkedin.android;scheme=https;end';
+    }
+  "
+  class="text-xs font-semibold text-slate-700 hover:text-blue-700 bg-slate-100 hover:bg-blue-50 border border-slate-200 px-3 py-1.5 rounded-lg transition"
+>
+  LinkedIn Profile
+</a>
           <a 
             href="https://www.instagram.com/datadino.edutech" 
             target="_blank" 
@@ -162,6 +273,46 @@
     </footer>
 
   </div>
+
+  <!-- Form Submission Script -->
+  <script>
+    const form = document.getElementById('waitlistForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formSuccess = document.getElementById('formSuccess');
+    const formError = document.getElementById('formError');
+
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyelCoFy9KGW_cSI6jP-ptZaSmgkRUqzblgKWfShq4QWm3rGpA2mNezi4eNht3IiEo/exec';
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Update button state to loading
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Reserving your seat...</span>';
+      formSuccess.classList.add('hidden');
+      formError.classList.add('hidden');
+
+      const formData = new FormData(form);
+
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+      .then(() => {
+        // Successful submission
+        form.reset();
+        form.classList.add('hidden');
+        formSuccess.classList.remove('hidden');
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        formError.classList.remove('hidden');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Claim 10% Off & Reserve Seat</span><span>→</span>';
+      });
+    });
+  </script>
 
 </body>
 </html>
