@@ -4,25 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DataDino Edutech | Learn Data, Lead Tomorrow</title>
-  <!-- Tailwind CSS CDN -->
+
+  <!-- ============================================================ -->
+  <!-- [HEAD: EXTERNAL ASSETS & FONTS]                             -->
+  <!-- ============================================================ -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Font: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============================================================ -->
+  <!-- [HEAD: CUSTOM STYLES & ANIMATIONS]                          -->
+  <!-- ============================================================ -->
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
+
+    /* Looping Progress Tube Animation */
+    @keyframes fillAndReset {
+      0% { width: 4%; }
+      20% { width: 28%; }
+      50% { width: 65%; }
+      80% { width: 88%; }
+      95% { width: 100%; }
+      100% { width: 4%; }
+    }
+    @keyframes shimmerMove {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(250%); }
+    }
+    .tube-liquid-loop {
+      background: linear-gradient(90deg, #f59e0b, #fbbf24, #d97706);
+      animation: fillAndReset 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .tube-shimmer {
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+      animation: shimmerMove 1.8s infinite ease-in-out;
+    }
+
+    /* Custom Horizontal Scrollbar for Playlists */
+    .playlist-scroll::-webkit-scrollbar {
+      height: 6px;
+    }
+    .playlist-scroll::-webkit-scrollbar-track {
+      background: #f1f5f9;
+      border-radius: 9999px;
+    }
+    .playlist-scroll::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .playlist-scroll::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
   </style>
-</head>
 <body class="bg-gradient-to-b from-slate-50 via-white to-amber-50/30 text-slate-800 antialiased min-h-screen flex flex-col justify-between p-4 sm:p-6 md:p-8">
 
   <div class="max-w-xl mx-auto w-full space-y-4 sm:space-y-5">
     
-    <!-- HEADER: Original size with flexible space protection -->
+    <!-- ============================================================ -->
+    <!-- [SECTION 1: TOP HEADER & SUBSCRIBE CTA]                      -->
+    <!-- ============================================================ -->
     <header class="flex items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200/80 shadow-sm">
-      <!-- Logo Side -->
       <div class="flex items-center gap-3 min-w-0">
         <img 
           src="Company Logo.png" 
@@ -35,10 +79,9 @@
         </div>
       </div>
 
-      <!-- YouTube Button + Animated Indicator -->
       <div class="flex flex-col items-center flex-shrink-0">
         <a 
-          href="https://openinyoutube.com/@Datadino_Edutech" 
+          href="https://linktw.in/hkiixv" 
           target="_blank" 
           rel="noopener noreferrer"
           class="flex items-center gap-2 bg-[#FF0000] hover:bg-red-600 active:scale-95 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-lg shadow-red-500/25 transition-all duration-200 whitespace-nowrap"
@@ -49,7 +92,6 @@
           <span>Subscribe</span>
         </a>
 
-        <!-- Animated Arrow & Indicator Below Subscribe Button -->
         <div class="flex items-center gap-1 mt-1.5 text-[11px] font-bold text-red-600 animate-bounce whitespace-nowrap">
           <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
@@ -59,7 +101,9 @@
       </div>
     </header>
 
-    <!-- TOOLS BADGE ROW -->
+    <!-- ============================================================ -->
+    <!-- [SECTION 2: TOOLS ROW & CORE HOOK]                           -->
+    <!-- ============================================================ -->
     <div class="text-center bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-xl py-2.5 px-3 shadow-xs">
       <p class="text-[11px] uppercase tracking-wider text-slate-500 font-bold mb-2">You Will Get Videos On All Data Tools</p>
       <div class="flex flex-wrap justify-center gap-1.5 text-xs font-semibold">
@@ -71,7 +115,6 @@
       </div>
     </div>
 
-    <!-- MAIN HOOK / CORE IDEOLOGY CARD -->
     <div class="p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-yellow-500/10 to-amber-500/5 border border-amber-300/60 shadow-xs text-center">
       <p class="text-sm sm:text-base font-bold text-slate-900 leading-snug">
         AI can give you code, <br class="sm:hidden" />
@@ -79,26 +122,111 @@
       </p>
     </div>
 
-    <!-- COURSE TEASER CARD -->
-    <div class="relative overflow-hidden rounded-2xl bg-white border-2 border-amber-400/40 p-5 shadow-md shadow-amber-500/5">
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-amber-100 text-amber-900 border border-amber-300">
-          <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
-          PYTHON COURSE IS LOADING!
-        </span>
-        <span class="text-xs text-slate-500 font-semibold">Upcoming Cohort</span>
+    <!-- ============================================================ -->
+    <!-- [SECTION 3: YOUTUBE PLAYLISTS CAROUSEL]                      -->
+    <!-- ============================================================ -->
+    <div class="rounded-2xl bg-white border border-slate-200/80 p-4 shadow-xs">
+      <div class="flex items-center justify-between mb-2 px-0.5">
+        <h2 class="text-xs sm:text-sm font-extrabold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-red-600"></span>
+          YouTube Playlists
+        </h2>
+        <span class="text-[11px] text-slate-400 font-medium">Scroll to explore →</span>
+      </div>
+
+      <div class="playlist-scroll flex gap-3 overflow-x-auto pb-2 pt-1 -mx-1 px-1">
+        <!-- Playlist Card 1 -->
+        <a 
+          href="https://linktw.in/ojvfue" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex-shrink-0 w-64 p-3 rounded-xl bg-gradient-to-br from-amber-50/80 to-white border border-amber-200/80 hover:border-amber-400 hover:shadow-md transition-all group flex flex-col justify-between"
+        >
+          <div>
+            <div class="flex items-center justify-between text-[10px] font-bold text-amber-800 mb-1.5">
+              <span class="bg-amber-100 px-2 py-0.5 rounded-md">🔥Top 100 Questions</span>
+              <span class="text-slate-400">Alternate Days</span>
+            </div>
+            <h4 class="text-xs font-bold text-slate-900 group-hover:text-amber-700 transition leading-snug mb-1">
+              Python 100 Interview Series
+            </h4>
+            <p class="text-[11px] text-slate-500 line-clamp-2 leading-relaxed">
+              Real-world technical questions solved step-by-step with zero shortcuts.
+            </p>
+          </div>
+          <div class="flex items-center gap-1 text-[11px] font-bold text-red-600 mt-2.5">
+            <span>Watch Playlist</span>
+            <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </div>
+        </a>
+
+        <!-- Playlist Card 2 -->
+        <a 
+          href="https://linktw.in/xhbike" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="flex-shrink-0 w-64 p-3 rounded-xl bg-gradient-to-br from-sky-50/80 to-white border border-sky-200/80 hover:border-sky-400 hover:shadow-md transition-all group flex flex-col justify-between"
+        >
+          <div>
+            <div class="flex items-center justify-between text-[10px] font-bold text-sky-800 mb-1.5">
+              <span class="bg-sky-100 px-2 py-0.5 rounded-md">📊 Top 100 Questions</span>
+              <span class="text-slate-400">Full Concepts</span>
+            </div>
+            <h4 class="text-xs font-bold text-slate-900 group-hover:text-sky-700 transition leading-snug mb-1">
+              SQL 100 Interview Series
+            </h4>
+            <p class="text-[11px] text-slate-500 line-clamp-2 leading-relaxed">
+              From foundational queries to advanced window functions and DAX modeling.
+            </p>
+          </div>
+          <div class="flex items-center gap-1 text-[11px] font-bold text-red-600 mt-2.5">
+            <span>Watch Playlist</span>
+            <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+   <!-- ============================================================ -->
+    <!-- [SECTION 4: COURSE TEASER & ANIMATED LOADING TUBE]           -->
+    <!-- ============================================================ -->
+    <div class="relative overflow-hidden rounded-2xl bg-white border-2 border-amber-400/60 p-5 shadow-lg shadow-amber-500/10">
+      
+      <!-- DYNAMIC COURSE LOADING HEADER & TUBE -->
+      <div class="bg-gradient-to-r from-amber-50 via-yellow-50/60 to-amber-50 rounded-xl p-3 border border-amber-300/80 mb-4 shadow-xs">
+        <div class="flex items-center justify-between gap-2 mb-2">
+          <div class="flex items-center gap-2">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
+            </span>
+            <span class="text-xs sm:text-[13px] font-black text-amber-950 tracking-wide uppercase">
+              Python Course is Loading...
+            </span>
+          </div>
+          <!-- Dynamic Looping Percentage -->
+          <span id="loadingPercent" class="text-[11px] font-extrabold text-amber-900 bg-amber-200/80 px-2.5 py-0.5 rounded-full tabular-nums">
+            0%
+          </span>
+        </div>
+
+        <!-- Looping Amber Tube -->
+        <div class="w-full h-3 bg-slate-200/90 rounded-full overflow-hidden p-0.5 border border-slate-300/80 shadow-inner">
+          <div class="tube-liquid-loop h-full rounded-full relative overflow-hidden">
+            <div class="tube-shimmer absolute inset-0 w-1/2"></div>
+          </div>
+        </div>
       </div>
 
       <h2 class="text-base sm:text-lg font-black text-slate-900 mb-2 tracking-tight">
         Why This Course?
       </h2>
       
-      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
         Here you will understand what the code does behind the screen. We bridge the gap between AI-generated scripts and deep technical fundamentals.
       </p>
 
-      <!-- Key Value Points -->
-      <div class="space-y-2.5 bg-slate-50 rounded-xl p-3 border border-slate-200 mb-4 text-xs text-slate-700">
+      <div class="space-y-2 bg-slate-50 rounded-xl p-3 border border-slate-200 text-xs text-slate-700">
         <div class="flex items-start gap-2">
           <span class="text-emerald-600 font-black text-sm leading-none mt-0.5">✓</span>
           <span><strong>Unshakeable Confidence:</strong> Gain the ability to tell anyone on their face that you know Python core concepts forever.</span>
@@ -108,20 +236,11 @@
           <span><strong>Official Credential:</strong> Certificate of completion automatically delivered to your email after 2 months.</span>
         </div>
       </div>
-
-      <!-- YouTube Watch CTA -->
-      <a 
-        href="https://openinyoutube.com/@Datadino_Edutech" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-bold text-xs sm:text-sm py-3 rounded-xl transition shadow-md shadow-red-600/20 active:scale-[0.99]"
-      >
-        <span>Watch Free Episodes on YouTube</span>
-        <span>→</span>
-      </a>
     </div>
 
-    <!-- OPTION B: DEDICATED EARLY ACCESS WAITLIST CARD -->
+    <!-- ============================================================ -->
+    <!-- [SECTION 5: WAITLIST FORM & LIVE BADGE]                      -->
+    <!-- ============================================================ -->
     <div class="rounded-2xl bg-white border border-slate-200/90 p-5 shadow-sm">
       <div class="flex items-center justify-between gap-2 mb-2">
         <h3 class="text-sm sm:text-base font-extrabold text-slate-900 tracking-tight">
@@ -131,11 +250,22 @@
           Get 10% Discount
         </span>
       </div>
+
+      <!-- Live Counter Badge -->
+      <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200/80 px-3 py-1.5 rounded-xl mb-3 shadow-xs">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <span class="text-xs font-bold text-slate-800">
+          🔥 <span id="enrolledCounter" class="text-amber-700 font-extrabold">500+</span> learners already joined
+        </span>
+      </div>
+
       <p class="text-xs text-slate-500 mb-4 leading-relaxed">
         Be the first to get access when the cohort launches and secure early-bird pricing.
       </p>
 
-      <!-- Waitlist Form -->
       <form id="waitlistForm" class="space-y-3">
         <div>
           <label for="name" class="block text-[11px] font-bold text-slate-700 uppercase tracking-wide mb-1">Full Name</label>
@@ -157,6 +287,21 @@
             name="email" 
             required 
             placeholder="you@example.com" 
+            class="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition bg-slate-50/50"
+          />
+        </div>
+
+        <!-- WhatsApp Phone Field -->
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <label for="phone" class="block text-[11px] font-bold text-slate-700 uppercase tracking-wide">Contact Number</label>
+            <span class="text-[10px] text-slate-400 font-semibold">(Optional - for direct launch alert)</span>
+          </div>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            placeholder="Enter Contact Number" 
             class="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition bg-slate-50/50"
           />
         </div>
@@ -186,7 +331,7 @@
               id="city" 
               name="city" 
               required 
-              placeholder="Bengaluru" 
+              placeholder="Enter City" 
               class="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition bg-slate-50/50"
             />
           </div>
@@ -197,7 +342,7 @@
               id="state" 
               name="state" 
               required 
-              placeholder="Karnataka" 
+              placeholder="Enter State" 
               class="w-full px-3 py-2 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition bg-slate-50/50"
             />
           </div>
@@ -213,20 +358,26 @@
         </button>
       </form>
 
-      <!-- Success Feedback (Hidden by default) -->
+      <!-- Feedback States -->
       <div id="formSuccess" class="hidden mt-3 p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-center">
         <p class="text-xs font-bold text-emerald-800">🎉 Seat Reserved Successfully!</p>
         <p class="text-[11px] text-emerald-700 mt-0.5">We have logged your email. Your 10% early-bird coupon code will arrive when registration opens.</p>
       </div>
 
-      <!-- Error Feedback (Hidden by default) -->
+      <div id="formDuplicate" class="hidden mt-3 p-3 bg-amber-50 border border-amber-200 rounded-xl text-center">
+        <p class="text-xs font-bold text-amber-800">⚡ Already on the Waitlist!</p>
+        <p class="text-[11px] text-amber-700 mt-0.5">This email is already registered. Your early-bird discount is already locked in.</p>
+      </div>
+
       <div id="formError" class="hidden mt-3 p-3 bg-rose-50 border border-rose-200 rounded-xl text-center">
         <p class="text-xs font-bold text-rose-800">Submission failed</p>
         <p class="text-[11px] text-rose-700 mt-0.5">Please check your connection and try again.</p>
       </div>
     </div>
 
-    <!-- ABOUT ME & SOCIAL PROOF -->
+    <!-- ============================================================ -->
+    <!-- [SECTION 6: ABOUT ME & SOCIAL PROOF]                         -->
+    <!-- ============================================================ -->
     <div class="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
       <img 
         src="Mohit Image.jpeg" 
@@ -239,21 +390,20 @@
           I am a certified Data Professional on a mission to provide quality teaching at an affordable price so anyone can learn and excel.
         </p>
         
-    <!-- Social Profiles -->
         <div class="flex items-center justify-center sm:justify-start gap-2.5 mt-3">
-<a 
-  href="https://www.linkedin.com/in/mohitnath-dataanalyst/" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  onclick="
-    if (/Android/i.test(navigator.userAgent)) {
-      window.location.href = 'intent://www.linkedin.com/in/mohitnath-dataanalyst/#Intent;package=com.linkedin.android;scheme=https;end';
-    }
-  "
-  class="text-xs font-semibold text-slate-700 hover:text-blue-700 bg-slate-100 hover:bg-blue-50 border border-slate-200 px-3 py-1.5 rounded-lg transition"
->
-  LinkedIn Profile
-</a>
+          <a 
+            href="https://www.linkedin.com/in/mohitnath-dataanalyst/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            onclick="
+              if (/Android/i.test(navigator.userAgent)) {
+                window.location.href = 'intent://www.linkedin.com/in/mohitnath-dataanalyst/#Intent;package=com.linkedin.android;scheme=https;end';
+              }
+            "
+            class="text-xs font-semibold text-slate-700 hover:text-blue-700 bg-slate-100 hover:bg-blue-50 border border-slate-200 px-3 py-1.5 rounded-lg transition"
+          >
+            LinkedIn Profile
+          </a>
           <a 
             href="https://www.instagram.com/datadino.edutech" 
             target="_blank" 
@@ -266,43 +416,74 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- ============================================================ -->
+    <!-- [SECTION 7: FOOTER]                                          -->
+    <!-- ============================================================ -->
     <footer class="text-center text-[11px] text-slate-400 py-2">
       © DataDino Edutech • Learn Data, Lead Tomorrow
     </footer>
 
   </div>
 
-  <!-- Form Submission Script -->
+<!-- ============================================================ -->
+  <!-- [SECTION 8: JAVASCRIPT LOGIC]                                -->
+  <!-- ============================================================ -->
   <script>
+    // --- [JS: DOM ELEMENTS] ---
     const form = document.getElementById('waitlistForm');
     const submitBtn = document.getElementById('submitBtn');
     const formSuccess = document.getElementById('formSuccess');
+    const formDuplicate = document.getElementById('formDuplicate');
     const formError = document.getElementById('formError');
+    const enrolledCounter = document.getElementById('enrolledCounter');
+    const loadingPercent = document.getElementById('loadingPercent');
 
+    // --- [JS: SCRIPT ENDPOINT] ---
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyelCoFy9KGW_cSI6jP-ptZaSmgkRUqzblgKWfShq4QWm3rGpA2mNezi4eNht3IiEo/exec';
 
+    // --- [JS: 1. FETCH LIVE REGISTRATION COUNT] ---
+    let currentLiveCount = 500;
+    fetch(SCRIPT_URL)
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.count) {
+          currentLiveCount = data.count;
+          enrolledCounter.textContent = currentLiveCount + '+';
+        }
+      })
+      .catch(() => {
+        enrolledCounter.textContent = '500+';
+      });
+
+    // --- [JS: 2. HANDLE FORM SUBMISSION] ---
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Update button state to loading
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<span>Reserving your seat...</span>';
       formSuccess.classList.add('hidden');
+      formDuplicate.classList.add('hidden');
       formError.classList.add('hidden');
 
       const formData = new FormData(form);
 
       fetch(SCRIPT_URL, {
         method: 'POST',
-        body: formData,
-        mode: 'no-cors'
+        body: formData
       })
-      .then(() => {
-        // Successful submission
-        form.reset();
-        form.classList.add('hidden');
-        formSuccess.classList.remove('hidden');
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 'duplicate') {
+          formDuplicate.classList.remove('hidden');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Claim 10% Off & Reserve Seat</span><span>→</span>';
+        } else {
+          form.reset();
+          form.classList.add('hidden');
+          formSuccess.classList.remove('hidden');
+          currentLiveCount = (data.count) ? data.count : currentLiveCount + 1;
+          enrolledCounter.textContent = currentLiveCount + '+';
+        }
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -311,6 +492,26 @@
         submitBtn.innerHTML = '<span>Claim 10% Off & Reserve Seat</span><span>→</span>';
       });
     });
+
+    // --- [JS: 3. LOOPING COURSE LOADING PERCENTAGE] ---
+    const cycleSteps = [
+      { pct: '12%', delay: 400 },
+      { pct: '38%', delay: 700 },
+      { pct: '64%', delay: 900 },
+      { pct: '89%', delay: 900 },
+      { pct: '100%', delay: 700 },
+      { pct: '0%', delay: 400 }
+    ];
+    let stepIndex = 0;
+    function runLoadingCycle() {
+      if (loadingPercent) {
+        loadingPercent.textContent = cycleSteps[stepIndex].pct;
+        const currentDelay = cycleSteps[stepIndex].delay;
+        stepIndex = (stepIndex + 1) % cycleSteps.length;
+        setTimeout(runLoadingCycle, currentDelay);
+      }
+    }
+    runLoadingCycle();
   </script>
 
 </body>
